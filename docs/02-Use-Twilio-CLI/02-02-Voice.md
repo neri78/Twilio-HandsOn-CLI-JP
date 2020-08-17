@@ -30,8 +30,7 @@ e-method GET
 実行結果が表示されます。
 ```
 SID                                 Result   Voice URL                               Voice Method
-PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Success  https://demo.twilio.com/
-welcome/voice/ja  GET
+PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Success  https://demo.twilio.com/welcome/voice/ja  GET
 ```
 このTwilio番号に電話をかけてみてください。  
 トライアル版の場合は最初にトライアル版を利用中であるというメッセージが再生され、何かキーを押すことで指定したメッセージを再生できます。日本語のメッセージが再生されることを確認しましょう。
