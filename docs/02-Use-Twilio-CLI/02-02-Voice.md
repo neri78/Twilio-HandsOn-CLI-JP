@@ -40,7 +40,6 @@ Twilio CLIを用いて電話を発信する場合は、`api:core:calls:create`�
 下記のコマンドをご自身の番号に変更し、実行してください。
 ```
 twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https://demo.twilio.com/docs/voice.xml
-welcome/voice/ja
 ```
 コマンドや番号が正しければ、キューに追加された状態が表示されます。
 ```
