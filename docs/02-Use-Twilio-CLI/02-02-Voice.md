@@ -23,8 +23,7 @@ PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  +12xxxxxxxxx  (2xx) xxx-xxxx
 Twilioは着信応答時に[TwiML](https://jp.twilio.com/docs/voice/twiml)と呼ばれているマークアップ言語で応答メッセージを設定できます。この場合は、`--voice-url`で __TwiML__ がホスティングされているURLを指定できます。  
 次のコマンドをご自身のTwilio番号に変更し設定してください。
 ```
-twilio phone-numbers:update +12xxxxxxxxx --voice-url https://demo.twilio.com/
-welcome/voice/ja --voic
+twilio phone-numbers:update +12xxxxxxxxx --voice-url https://demo.twilio.com/welcome/voice/ja --voic
 e-method GET
 ```
 実行結果が表示されます。
