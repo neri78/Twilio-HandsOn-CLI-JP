@@ -48,8 +48,7 @@ Assets:
 ここでは[ハンズオン: Twilio CLIを使ったサービスの利用 手順2: CLIを使った電話の着信設定と発信](../02-Use-Twilio-CLI/02-02-Voice.md)のようにTwilio番号に着信があった際のTwiMLのホスティング先として`--voice-url`に先ほどのURLを指定します。
 次のコマンドをご自身のTwilio番号に変更し設定してください。
 ```
-twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-dev.twil.io/never-gonna-give-you-up --voic
-e-method GET
+twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-dev.twil.io/never-gonna-give-you-up --voice-method GET
 ```
 
 このTwilio番号に電話をかけ、TwiMLに設定されている音楽が再生されることを確認してください。
