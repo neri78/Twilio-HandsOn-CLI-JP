@@ -16,7 +16,7 @@
 次のコマンドを実行し、SMS、音声通話が可能な米国地域番号番号の一覧を表示します。
 
 ```
-twilio phone-numbers:buy:local --country-code US --sms-enabled　--voice-enabled
+twilio phone-numbers:buy:local --country-code US --sms-enabled --voice-enabled
 ```
 
 選択肢から一つ選択し`Enter`キーを押すと購入の意思を確認され、`Y`と入力することで電話番号をAPI経由で購入します。
@@ -75,7 +75,7 @@ se upgrade your account.. See https://www.twilio.com/docs/errors/21404 for more 
 $ twilio phone-numbers:buy:local --country-code JP --address-sid ADxxxxxxxxxxxxxxxxxxxx --bundle-sid BUxxxxxxxxxxxxxxxxxxx
 ```
 
-現在、日本の番号を購入する場合は住所ならびに本人情報を本人書類を添えて登録し、本人確認を行う必要があります。このプロセスで発行された `Address Sid`と`Bundle Sid`を用いて番号を取得します。必要な情報が足りていない場合は次のようなエラーが表示されます。
+現在、日本の番号を購入する場合は住所ならびに[本人情報を本人書類を添えて登録](https://support.twilio.com/hc/en-us/articles/360044400214)し、本人確認を行う必要があります。このプロセスで発行された `Address Sid`と`Bundle Sid`を用いて番号を取得します。必要な情報が足りていない場合は次のようなエラーが表示されます。
 
 __Address Sid__ を指定していない場合
 ```

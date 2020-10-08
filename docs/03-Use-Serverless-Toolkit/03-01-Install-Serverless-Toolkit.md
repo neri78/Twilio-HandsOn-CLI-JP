@@ -51,4 +51,4 @@ COMMANDS
 
 
 ## 次の手順
-[手順2: CLIを使った電話の発信と着信設定](./03-02-Create-a-Project.md)
+[手順2: プロジェクトの作成](./03-02-Create-a-Project.md)

@@ -50,12 +50,13 @@ twilio serverless:start --ngrok=""
 ```
 出力から`Twilio functions available:`というラベルを探し、`https://xxxxxxx.ngrok.io/never-gonna-give-you-up` (xxxxxxxは環境によって異なる)というURLを控えてください。
 
-次に[ハンズオン: Twilio CLIを使ったサービスの利用 手順2: CLIを使った電話の着信設定と発信](../02-Use-Twilio-CLI/02-02-Voice.md)のようにTwilio番号に着信があった際のTwiMLのホスティング先として`--voice-url`に先ほどのURLを指定します。
-次のコマンドをご自身のTwilio番号に変更し設定してください。
+次に[ハンズオン: Twilio CLIを使ったサービスの利用 手順2: CLIを使った電話の着信設定と発信](../02-Use-Twilio-CLI/02-02-Voice.md#2-3-検証済み番号にtwilio番号から発信)のようにTwilio番号からご自身の番号に発信した際に利用するTwiMLを指定します。
+次のコマンドをご自身のTwilio番号、電話番号、URLそれぞれを変更し設定してください。
 ```
-twilio phone-numbers:update +12xxxxxxxxx --voice-url https://xxxxxxx.ngrok.io/never-gonna-give-you-up --voic
-e-method GET
+twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https://xxxxxxx.ngrok.io/never-gonna-give-you-up
 ```
+
+いかがでしょうか。音楽は再生されましたか？ Twilio Serverless Toolkitを利用することでTwiMLを返すWebアプリケーションを簡単に作成できます。
 
 次の手順ではこのローカルアプリケーションを __Twilio Runtime__ にデプロイします。
 

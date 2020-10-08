@@ -12,7 +12,7 @@
 ```
 twilio phone-numbers:list
 ```
-番号購入時にも表示された`SID, Phone Number, Friendly Name`が表示されます。この中で、__E.164フォーマット__ で表示されている`Phone Number`を控えておきます。
+番号購入時にも表示された`SID, Phone Number, Friendly Name`が表示されます。この中で、[E.164フォーマット](https://jp.twilio.com/docs/glossary/what-e164)で表示されている`Phone Number`を控えておきます。
 ```
 SID                                 Phone Number  Friendly Name
 PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  +12xxxxxxxxx  (2xx) xxx-xxxx
@@ -23,8 +23,7 @@ PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  +12xxxxxxxxx  (2xx) xxx-xxxx
 Twilioは着信応答時に[TwiML](https://jp.twilio.com/docs/voice/twiml)と呼ばれているマークアップ言語で応答メッセージを設定できます。この場合は、`--voice-url`で __TwiML__ がホスティングされているURLを指定できます。  
 次のコマンドをご自身のTwilio番号に変更し設定してください。
 ```
-twilio phone-numbers:update +12xxxxxxxxx --voice-url https://demo.twilio.com/welcome/voice/ja --voic
-e-method GET
+twilio phone-numbers:update +12xxxxxxxxx --voice-url https://demo.twilio.com/welcome/voice/ja --voice-method GET
 ```
 実行結果が表示されます。
 ```
@@ -39,14 +38,14 @@ PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Success  https://demo.twilio.com/welcome/voi
 Twilio CLIを用いて電話を発信する場合は、`api:core:calls:create`コマンドを使用します。その際、`--from`に先ほど控えたTwilio番号を、`--to`に発信先番号を指定します。接続後に再生されるメッセージは[TwiML](https://jp.twilio.com/docs/voice/twiml)で定義する必要があり、そのTwiMLがホストされている場所を`--url`で指定します。  
 下記のコマンドをご自身の番号に変更し、実行してください。
 ```
-twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https://demo.twilio.com/docs/voice.xml
+twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https://demo.twilio.com/welcome/voice/ja
 ```
 コマンドや番号が正しければ、キューに追加された状態が表示されます。
 ```
 SID                                 From          To             Status  Start Time
 CAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  +12xxxxxxxxx  +819xxxxxxxxx  queued  null
 ```
-いかがでしょう、ご自身の番号に着信はありましたか？何が再生されたでしょうか？ぜひ、確認してみてください。
+いかがでしょう、ご自身の番号に着信はありましたか？同じメッセージが再生されていることを確認してください。
 
 さて、トライアル版の場合は、検証済みの番号にのみ発信が可能であるという点に注意が必要です。検証済みでない番号に発信を行うと、下記のようなエラーメッセージが表示されます。
 

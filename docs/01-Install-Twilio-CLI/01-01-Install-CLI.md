@@ -25,7 +25,7 @@ CLIと依存パッケージがインストールされます。完了後、次�
 ```
 twilio
 ```
-実行結果（Mac OS X、Node V12.18.2の場合）
+実行結果（Mac OS X、Node.js V12.18.2の場合、一部プラグインをインストール済みのため表示が異なる場合があります。）
 ```
 $ twilio
 unleash the power of Twilio from your command prompt
