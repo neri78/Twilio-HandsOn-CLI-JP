@@ -12,6 +12,6 @@ Twilio CLIのハンズオン手順書です。
 
 ## ハンズオン
 
-- [ハンズオン: Twilio CLIをインストール](./docs/01-Install-Twilio-CLI/01-00-Overview.md)
-- [ハンズオン: Twilio CLIを使ったサービスの利用](./docs/02-Use-Twilio-CLI/02-00-Overview.md)
-- [ハンズオン: Twilio CLIを使ったサーバーレス実行環境の構築](./docs/03-Use-Serverless-Toolkit/03-00-Overview.md)
+- [ハンズオン: Twilio CLIをインストール](docs/01-Install-Twilio-CLI/01-00-Overview.md)
+- [ハンズオン: Twilio CLIを使ったサービスの利用](docs/02-Use-Twilio-CLI/02-00-Overview.md)
+- [ハンズオン: Twilio CLIを使ったサーバーレス実行環境の構築](docs/03-Use-Serverless-Toolkit/03-00-Overview.md)
