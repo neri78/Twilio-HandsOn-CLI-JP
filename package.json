@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "npx npm-run-all --parallel jplint linkchecker",
+    "test": "npx npm-run-all --parallel jplint linkcheck",
     "jplint" : "npx textlint docs",
-    "linkchecker" : "find docs -name \\*.md -exec npx markdown-link-check {} \\;"
+    "linkcheck" : "find . -name \\*.md -not -path '*node_modules/*' -exec npx markdown-link-check {} \\;"
   },
   "repository": {
     "type": "git",
