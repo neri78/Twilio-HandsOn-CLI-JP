@@ -1,3 +1,4 @@
+![Twilio HandsOn CLI](docs/assets/header.jpg)
 # Twilio-HandsOn-CLI-JP
 Twilio CLIのハンズオン手順書です。
 
