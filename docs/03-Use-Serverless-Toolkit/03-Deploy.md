@@ -45,7 +45,7 @@ Assets:
 
 ## 3-2. 着信応答の設定
 
-ここでは[ハンズオン: Twilio CLIを使ったサービスの利用 手順2: CLIを使った電話の着信設定と発信](../02-Use-Twilio-CLI/02-02-Voice.md)のようにTwilio番号に着信があった際のTwiMLのホスティング先として`--voice-url`に先ほどのURLを指定します。
+ここではTwilio番号に着信があった際のTwiMLのURLとして`--voice-url`に先ほどのURLを指定します。
 次のコマンドをご自身のTwilio番号に変更し設定してください。
 ```
 twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-dev.twil.io/never-gonna-give-you-up --voice-method GET
@@ -55,7 +55,7 @@ twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-de
 
 ここまででハンズオンとしては一旦終了となります。時間が余るようであれば、次のセクションに挑戦してみてください。
 
-なお、今回デプロイしたアプリケーションは __公開__ 状態となっているため、誰もがアクセスできます。Twilio Functionsは実行ごとに課金されるため、不要になった段階で、[コンソール](https://www.twilio.com/console/functions/overview/services)から、あるいは下記の手順で削除してください。
+なお、今回デプロイしたアプリケーションは __公開__ 状態となっているため、誰もがアクセスできます。Twilio Functionsは実行ごとに課金されるため、不要になった段階で、[コンソール](https://jp.twilio.com/console/functions/overview/services)から、あるいは下記の手順で削除してください。
 
 1. 現在デプロイしているサービスを確認し、`SID`を控える
 ```
@@ -79,24 +79,24 @@ cli-handson
 twilio api:serverless:v1:services:remove --sid ZS******************************
 ```
 
-同様に不要な電話番号を[コンソール]()、またはCLIを用いて削除できます。CLIのコマンドについては一部のみ記載します。これまで学習してきた内容を元に調べてみましょう。
+同様に不要な電話番号を[コンソール](https://jp.twilio.com/console/phone-numbers/incoming)、またはCLIを用いて削除できます。CLIのコマンドについては一部のみ記載します。これまで学習してきた内容を元に調べてみましょう。
 
 ```
 twilio api:core:incoming-phone-numbers
 ```
 
-## 3-3. （挑戦）Functionの実装内容を変更し、再度デプロイ
+## 3-3.（挑戦）Functionの実装内容を変更し、再度デプロイ
 
-[TwiML - Say](https://www.twilio.com/docs/voice/twiml/say)を参考に、音楽の再生前に日本語で `今日のハンズオン、お疲れさまでした。こちらの音楽をお聞きください`というメッセージを再生するように`never-gonna-give-you-up.js`を変更し、再度デプロイしてみてください。
+[TwiML - Say](https://www.twilio.com/docs/voice/twiml/say)を参考に、音楽の再生前に日本語で `今日のハンズオン、お疲れさまでした。こちらの音楽をお聞きください`というメッセージを再生してみましょう。  
+__ヒント: `never-gonna-give-you-up.js`を変更し再度デプロイします。__
 
-## 3-4. （挑戦）TwilioQuestをプレイ
+## 3-4.（挑戦）TwilioQuestをプレイ
 
-今回のTwilio CLIだけではなく、他のTwilio製品を楽しみながら学びたいという方は、下記の記事を参考にRPGゲームを模したチュートリアル `TwilioQuest`のプレイに挑戦してみてください。
+Twilio CLIだけではなく、他のTwilio製品を楽しみながら学びたいという方は、下記の記事を参考にRPGゲームを模したチュートリアル `TwilioQuest`のプレイに挑戦してみてください。
 
 - [Game + Tutorial = TwilioQuest3のはじめかた](https://www.twilio.com/blog/game-tutorial-twilioquest)
 
 
-## 関連リソース
-
-- [Deploying with the Serverless Toolkit](https://www.twilio.com/docs/labs/serverless-toolkit/deploying)
-- [Twilio CLI Quickstart](https://www.twilio.com/docs/twilio-cli/quickstart)
+- 関連リソース
+  - [Deploying with the Serverless Toolkit](https://jp.twilio.com/docs/labs/serverless-toolkit/deploying)
+  - [Twilio CLI Quickstart](https://jp.twilio.com/docs/twilio-cli/quickstart)

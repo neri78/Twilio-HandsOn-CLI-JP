@@ -1,7 +1,7 @@
 #  手順3: CLIにオートコンプリート機能を追加（bashまたはzsh）
 ## はじめに
-Twilio CLIは公開されているAPIの機能を数多く利用することができる反面、コマンドの入力文字数が膨大になりがちです。この短所を解決するために`Tab`キーで入力候補を表示できるオートコンプリート機能を用意しています。  
-この手順では、インストールしたTwilio CLIのコマンド入力を補助するオートコンプリート機能をインストールします。この機能は `bash`または、`zsh`のみに現在対応しているため、対応するシェルを使用していない場合、あるいはすでにこの機能をインストール済みの場合は、[ハンズオン: Twilio CLIを使ったサービスの利用]()へ進んでください。
+Twilio CLIは公開されているAPIの機能を数多く利用できる反面、コマンドの入力文字数が膨大になりがちです。この短所を解決するために`Tab`キーで入力候補を表示できるオートコンプリート機能を用意しています。  
+この手順では、インストールしたTwilio CLIのコマンド入力を補助するオートコンプリート機能をインストールします。この機能は `bash`または、`zsh`のみに現在対応しています。そのため対応するシェルを使用していない場合、あるいはすでにこの機能をインストール済みの場合は[ハンズオン: Twilio CLIを使ったサービスの利用](../02-Use-Twilio-CLI/00-Overview.md)へ進んでください。
 
 ## この手順を進めるための前提条件
 - Twilio CLIがすでにインストールされていること
@@ -78,11 +78,10 @@ create  list    remove  use
 `profiles:list`コマンドを実行し、先ほど登録したプロファイルが表示されることを確認してください。
 
 
-## 関連リソース
-
-- [Twilio CLI Quickstart](https://www.twilio.com/docs/twilio-cli/quickstart)
+- 関連リソース
+  - [Twilio CLI Quickstart](https://jp.twilio.com/docs/twilio-cli/quickstart)
 
 
 
 ## 次の手順
-[ハンズオン: Twilio CLIを使ったサービスの利用](../02-Use-Twilio-CLI/02-00-Overview.md)
+[ハンズオン: Twilio CLIを使ったサービスの利用](../02-Use-Twilio-CLI/00-Overview.md)

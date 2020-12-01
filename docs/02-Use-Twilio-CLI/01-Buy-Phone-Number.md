@@ -9,17 +9,17 @@
 - [Twilio フリートライアルアカウントに関して](https://support.twilio.com/hc/en-us/articles/360044841214-Twilio-%E3%83%95%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
 
 ## この手順を進めるための前提条件
-この手順を進めるためにはTwilio CLIをインストールしており、Twilioアカウントが登録されている必要があります。まだインストールが終わっていない場合は、[ハンズオン: Twilio CLIをインストール](../01-Install-Twilio-CLI/01-00-Overview.md)を先に完了してください。
+この手順を進めるためにはTwilio CLIをインストールしており、Twilioアカウントが登録されている必要があります。まだインストールが終わっていない場合は、[ハンズオン: Twilio CLIをインストール](../01-Install-Twilio-CLI/00-Overview.md)を先に完了してください。
 
 ## 2-1. 購入可能な電話番号を表示
 
-次のコマンドを実行し、SMS、音声通話が可能な米国地域番号番号の一覧を表示します。
+次のコマンドを実行し、SMS、音声通話が可能な米国地域番号の一覧を表示します。
 
 ```
 twilio phone-numbers:buy:local --country-code US --sms-enabled --voice-enabled
 ```
 
-選択肢から一つ選択し`Enter`キーを押すと購入の意思を確認され、`Y`と入力することで電話番号をAPI経由で購入します。
+選択肢から1つ選択し`Enter`キーを押すと購入の意思を確認されます。`Y`と入力し電話番号をAPI経由で購入します。
 
 ```
 ? Phone Number  Region  ISO Country  Address Requirements
@@ -64,7 +64,7 @@ Twilioプロジェクトに`検証済み電話番号`が設定されていない
 se upgrade your account.. See https://www.twilio.com/docs/errors/21404 for more info.
 ```
 
-電話番号を購入することができたでしょうか？続けて音声発信とSMSの送信を試してみましょう。
+続けて音声発信とSMSの送信を試してみましょう。
 
 ---
 **参考: 日本の番号について**
@@ -75,25 +75,31 @@ se upgrade your account.. See https://www.twilio.com/docs/errors/21404 for more 
 $ twilio phone-numbers:buy:local --country-code JP --address-sid ADxxxxxxxxxxxxxxxxxxxx --bundle-sid BUxxxxxxxxxxxxxxxxxxx
 ```
 
-現在、日本の番号を購入する場合は住所ならびに[本人情報を本人書類を添えて登録](https://support.twilio.com/hc/en-us/articles/360044400214)し、本人確認を行う必要があります。このプロセスで発行された `Address Sid`と`Bundle Sid`を用いて番号を取得します。必要な情報が足りていない場合は次のようなエラーが表示されます。
+現在、日本の番号を購入する場合は住所ならびに[本人情報を本人書類を添えて登録](https://support.twilio.com/hc/en-us/articles/360044400214)し、本人確認が必要です。CLIではこのプロセスで発行された`Bundle Sid`と`Address Sid`を用いて番号を取得します。
 
-__Address Sid__ を指定していない場合
+`Bundle Sid`は[コンソール](https://jp.twilio.com/console/phone-numbers/regulatory-compliance/bundles)で確認できます。また、Bundle Sidに紐づく`Address Sid`はそれぞれのBundle Sid内部に登録されている`Supporting Documents`セクションで確認できます。
+![Address Sid](../assets/02-address-sid.png)
+
+
+
+必要な情報が足りていない場合は次のようなエラーが表示されます。
+
+### __Address Sid__ を指定していない場合
 ```
  » Error code 21631 from Twilio: Phone Number Requires an Address but the 'AddressSid' parameter was empty.. See https://www.twilio.com/docs/errors/21631 for more info.
 ```
 
-__Bundle Sid__ を指定していない場合
+### __Bundle Sid__ を指定していない場合
 ```
  » Error code 21649 from Twilio: To purchase or transfer this number you must provide a bundle compliant with the rules for the country and number type. More information here: https://www.twilio.com/docs/phone-numbers/regulatory/phone-numbers-regulatory-requirements-customers. See https://www.twilio.com/docs/errors/21649 for more info.
 ```
 ---
 
-## 関連リソース
-
-- [Twilio フリートライアルアカウントに関して](https://support.twilio.com/hc/en-us/articles/360044841214-Twilio-%E3%83%95%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
-- [規制情報に関わる書類の提出方法](https://support.twilio.com/hc/en-us/articles/360044400214-%E8%A6%8F%E5%88%B6%E6%83%85%E5%A0%B1%E3%81%AB%E9%96%A2%E3%82%8F%E3%82%8B%E6%9B%B8%E9%A1%9E%E3%81%AE%E6%8F%90%E5%87%BA%E6%96%B9%E6%B3%95)
-- [Twilio CLI Quickstart](https://www.twilio.com/docs/twilio-cli/quickstart)
+- 関連リソース
+  - [Twilio フリートライアルアカウントに関して](https://support.twilio.com/hc/en-us/articles/360044841214-Twilio-%E3%83%95%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6)
+  - [規制情報に関わる書類の提出方法](https://support.twilio.com/hc/en-us/articles/360044400214-%E8%A6%8F%E5%88%B6%E6%83%85%E5%A0%B1%E3%81%AB%E9%96%A2%E3%82%8F%E3%82%8B%E6%9B%B8%E9%A1%9E%E3%81%AE%E6%8F%90%E5%87%BA%E6%96%B9%E6%B3%95)
+  - [Twilio CLI Quickstart](https://jp.twilio.com/docs/twilio-cli/quickstart)
 
 
 ## 次の手順
-[手順2: CLIを使った電話の発信と着信設定](./02-02-Voice.md)
+[手順2: CLIを使った電話の発信と着信設定](02-Voice.md)

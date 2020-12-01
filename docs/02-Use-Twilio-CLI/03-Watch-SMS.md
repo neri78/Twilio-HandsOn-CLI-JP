@@ -20,7 +20,7 @@ twilio watch
 twilio plugins:install @twilio-labs/plugin-watch
 ```
 
-この`watch`を実行させたまま、購入済みのTwilio番号に電話をかける、あるいは別のシェル（ターミナル）またはコマンドプロンプトを開き、電話の発信を行うと、下記のようにログが出力されることを確認してください。
+この`watch`を実行させたまま、購入済みのTwilio番号に電話をかける、あるいは別のシェル（ターミナル）またはコマンドプロンプトを開き、電話を発信します。下記のようにログが出力されることを確認してください。
 ```
 And now my watch begins. It shall not end until CTRL-C (SIGINT).
 Date                 Type         Code         Text
@@ -31,11 +31,18 @@ Date                 Type         Code         Text
 
 ## 3-2. SMSを送信
 
-SMSの送信も試してみましょう。次のコマンドを`--from`をご自身のTwilio番号、`--to`を検証済みの電話番号に変更し、SMSが届くことを確認しましょう。
+SMSの送信も試してみましょう。次のコマンドを`--from`を取得したTwilio番号、`--to`を検証済みの電話番号に変更し、SMSが届くことを確認します。
 
 ```
 twilio api:core:messages:create --from +1xxxxxxxxxx --to +81xxxxxxxxxx --body はろー
 ```
+
+----
+
+利用している携帯電話会社によって値段は異なりますが、海外の番号から送られたSMSに返信すると約100円/通の費用が発生します。不用意に返信しないよう注意しましょう。
+
+----
+
 
 `watch`を別に起動している場合はこちらのアクティビティが出力していることを確認できます。
 
@@ -46,4 +53,4 @@ twilio api:core:messages:create --from +1xxxxxxxxxx --to +81xxxxxxxxxx --body �
 
 
 ## 次の手順
-[ハンズオン: Twilio CLIを使ったサービスの利用](../03-Use-Serverless-Toolkit/03-00-Overview.md)
+[ハンズオン: Twilio CLIを使ったサービスの利用](../03-Use-Serverless-Toolkit/00-Overview.md)

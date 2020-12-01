@@ -1,0 +1,34 @@
+{
+  "name": "twilio-handson-cli-jp",
+  "version": "1.0.0",
+  "description": "Twilio CLIのハンズオン手順書です。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx npm-run-all --parallel jplint linkchecker",
+    "jplint" : "npx textlint docs",
+    "linkchecker" : "find docs -name \\*.md -exec npx markdown-link-check {} \\;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neri78/Twilio-HandsOn-CLI-JP.git"
+  },
+  "keywords": [
+    "Twilio"
+  ],
+  "author": "Neri78",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neri78/Twilio-HandsOn-CLI-JP/issues"
+  },
+  "homepage": "https://github.com/neri78/Twilio-HandsOn-CLI-JP#readme",
+  "devDependencies": {
+    "markdown-link-check": "^3.8.3",
+    "textlint": "^11.7.6",
+    "textlint-rule-preset-ja-spacing": "^2.0.2",
+    "textlint-rule-preset-ja-technical-writing": "^4.0.1",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+  }
+}

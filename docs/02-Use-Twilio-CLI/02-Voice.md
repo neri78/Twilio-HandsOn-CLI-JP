@@ -31,7 +31,11 @@ SID                                 Result   Voice URL                          
 PNxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Success  https://demo.twilio.com/welcome/voice/ja  GET
 ```
 このTwilio番号に電話をかけてみてください。  
-トライアル版の場合は最初にトライアル版を利用中であるというメッセージが再生され、何かキーを押すことで指定したメッセージを再生できます。日本語のメッセージが再生されることを確認しましょう。
+トライアル版の場合は最初にトライアル版を利用中であるというメッセージが再生されます。全文は下記の通りです。このメッセージはスキップできません。
+
+> *You have a trial account. You can remove this message at anytime by upgrading to full account. Press any to execute your code.*
+
+メッセージの再生後に何かキーを押すと指定したメッセージを再生できます。日本語のメッセージが再生されることを確認しましょう。
 
 ## 2-3. 検証済み番号にTwilio番号から発信
 
@@ -45,21 +49,20 @@ twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https:/
 SID                                 From          To             Status  Start Time
 CAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  +12xxxxxxxxx  +819xxxxxxxxx  queued  null
 ```
-いかがでしょう、ご自身の番号に着信はありましたか？同じメッセージが再生されていることを確認してください。
+自分の番号に着信があり、先ほどと同じメッセージが再生されることを確認してください。
 
-さて、トライアル版の場合は、検証済みの番号にのみ発信が可能であるという点に注意が必要です。検証済みでない番号に発信を行うと、下記のようなエラーメッセージが表示されます。
+さて、トライアル版の場合は、検証済みの番号にのみ発信が可能であるという点に注意が必要です。検証済みでない番号に発信すると、下記のようなエラーメッセージが表示されます。
 
 ```
 » Error code 21219 from Twilio: The number +818xxxxxxxxx is unverified. Trial accounts may only make calls to verified
 numbers.. See https://www.twilio.com/docs/errors/21219 for more info.
 ```
 
-## 関連リソース
-
-- [TwiML](https://jp.twilio.com/docs/voice/twiml)
-- [Twilio CLI Quickstart](https://www.twilio.com/docs/twilio-cli/quickstart)
+- 関連リソース
+  - [TwiML](https://jp.twilio.com/docs/voice/twiml)
+  - [Twilio CLI Quickstart](https://jp.twilio.com/docs/twilio-cli/quickstart)
 
 
 
 ## 次の手順
-[手順3: CLIを使ったステータスの確認とSMSの発信](./02-03-Watch-SMS.md)
+[手順3: CLIを使ったステータスの確認とSMSの発信](03-Watch-SMS.md)

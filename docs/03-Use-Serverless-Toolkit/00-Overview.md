@@ -11,6 +11,6 @@
 - Twilio CLIを使ったSMS発信方法を学ぶ。
 
 ## 手順
-1. [Twilio Serverless Toolkitのインストール](./03-01-Install-Serverless-Toolkit.md)
-2. [プロジェクトの作成](./03-02-Create-a-Project.md)
-3. [プロジェクトのデプロイとTwilio番号の着信設定](./03-03-Deploy.md)
+1. [Twilio Serverless Toolkitのインストール](01-Install-Serverless-Toolkit.md)
+2. [プロジェクトの作成](02-Create-a-Project.md)
+3. [プロジェクトのデプロイとTwilio番号の着信設定](03-Deploy.md)
