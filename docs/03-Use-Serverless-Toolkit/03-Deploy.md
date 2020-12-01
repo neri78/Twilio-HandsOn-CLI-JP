@@ -59,7 +59,7 @@ twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-de
 
 1. 現在デプロイしているサービスを確認し、`SID`を控える
 ```
-twilio list
+twilio serverless:list
 
 実行結果
 Account      SK******************************
