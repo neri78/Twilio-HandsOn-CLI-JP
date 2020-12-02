@@ -51,6 +51,14 @@ twilio-cli configuration saved to "/Users/xxxxxxx/.twilio-cli/config.json"
 Saved twilio-cli-handson.
 ```
 
+---
+
+一部の環境では、プロファイルの作成に失敗する場合があります。その場合、代替方法として環境変数にアカウント情報を設定できます。下記を参考に設定します。
+- [Twilio CLI General Usage](https://jp.twilio.com/docs/twilio-cli/general-usage)
+- [How To Set Environment Variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
+
+---
+
 - 関連リソース
   - [Twilio REST API](https://jp.twilio.com/docs/iam/api)
   - [REST API: APIキー](https://jp.twilio.com/docs/iam/keys/api-key)

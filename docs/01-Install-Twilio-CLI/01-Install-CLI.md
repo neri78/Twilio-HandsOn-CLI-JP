@@ -54,6 +54,15 @@ COMMANDS
   plugins        list available plugins for installation
   profiles       manage credentials for Twilio profiles
 ```
+---
+
+__Twilio CLIのインストールに失敗する場合__
+
+Twilio CLIのインストール時にエラーが発生する場合、Node.jsがインストールできており、正しく利用できることを確認してください。
+
+- エラーの回避例<br>[Qiita - npmでpermission deniedになった時の対処法\[mac\]](https://qiita.com/okohs/items/ced3c3de30af1035242d)
+
+---
 
 ## 次の手順
 - [手順2: TwilioアカウントをCLIに登録](02-Create-Twilio-Profile.md)
