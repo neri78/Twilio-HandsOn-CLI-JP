@@ -62,6 +62,8 @@ twilio api:core:calls:create --from +12xxxxxxxx --to +81xxxxxxxxxx --url https:/
 
 自分の番号に着信があり、音楽は再生されたでしょうか。このようにTwilio Serverless Toolkitを利用しTwiMLを返すWebアプリケーションを簡単に作成できます。
 
+もしファイルが見つからない。というようなエラーメッセージが表示される場合は、mp3を次のファイルに変更してみてください。`https://api.twilio.com/cowbell.mp3` 
+
 次の手順ではこのローカルアプリケーションを __Twilio Runtime__ にデプロイします。
 
 
