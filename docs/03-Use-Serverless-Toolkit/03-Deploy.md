@@ -41,6 +41,7 @@ Functions:
    https://cli-handson-xxxx-dev.twil.io/never-gonna-give-you-up
 Assets:
 ```
+
 出力内容にエラーがないことを確認し、`Functions:`に表示されているURLを控えてください。
 
 ## 3-2. 着信応答の設定
@@ -57,11 +58,14 @@ twilio phone-numbers:update +12xxxxxxxxx --voice-url https://cli-handson-xxxx-de
 
 なお、今回デプロイしたアプリケーションは __公開__ 状態となっているため、誰もがアクセスできます。Twilio Functionsは実行ごとに課金されるため、不要になった段階で、[コンソール](https://jp.twilio.com/console/functions/overview/services)から、あるいは下記の手順で削除してください。
 
-1. 現在デプロイしているサービスを確認し、`SID`を控える
-```
-twilio serverless:list
+現在デプロイしているサービスを確認し、`SID`を控えます。
 
-実行結果
+```bash
+twilio serverless:list
+```
+
+実行結果は次のようになります。
+```
 Account      SK******************************
 Token        Yd******************************
 Service      ZS******************************
@@ -74,7 +78,9 @@ cli-handson
 │ Created:  Oct 08 2020 14:32:00 GMT+0900
 │ Updated:  Oct 08 2020 14:32:00 GMT+0900
 ```
-2. `cli-handson`の`SID`を指定し、サービスを削除する。
+
+`cli-handson`の`SID`を指定し、サービスを削除します。
+
 ```
 twilio api:serverless:v1:services:remove --sid ZS******************************
 ```
